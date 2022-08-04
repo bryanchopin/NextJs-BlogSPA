@@ -7,7 +7,7 @@ import Link from 'next/link';
 const name = 'Brychxpin';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
     <div className={styles.container}>
 
@@ -28,8 +28,6 @@ export default function Layout({ children, home }) {
       </Head>
 
       <header className={styles.header}>
-        {home ? (
-          <>
             <Image
               priority
               src="/images/profile.jpg"
@@ -39,37 +37,17 @@ export default function Layout({ children, home }) {
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
       </header>
-      <main>{children}</main>
-      {!home && (
+      <div className={styles.paragraph}>
+        <p>
+            I am a software engineer and a web developer. I am passionate about web development and the intersection of technology and design.
+        </p>
+      </div>
         <div className={styles.backToHome}>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
-      )}
     </div>
   );
 }

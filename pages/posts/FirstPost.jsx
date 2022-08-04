@@ -10,7 +10,6 @@ export default function FirstPost() {
     <Layout>
       <Head>
         <title>First Post</title>
-        <script src="https://connect.facebook.net/en_US/sdk.js" />
       </Head>
 
       <Script

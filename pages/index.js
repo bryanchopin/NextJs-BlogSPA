@@ -20,7 +20,13 @@ export default function Home() {
         <h3 className="title">
           Read{' '}
           <Link href="/posts/FirstPost">
-            <a>this page!</a>
+            <a>1st this page!</a>
+          </Link>
+        </h3>
+        <h3 className="title">
+          Read{' '}
+          <Link href="/posts/SecondPost">
+            <a>2st this page!</a>
           </Link>
         </h3>
 

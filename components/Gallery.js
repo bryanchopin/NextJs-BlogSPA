@@ -16,7 +16,6 @@ export default function Gallery({ userName  }) {
                 width={144}
                 alt='Profile'
             />
-            <p>my name is  { userName} </p>
              </div>
         </div>
     );

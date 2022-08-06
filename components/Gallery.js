@@ -2,7 +2,7 @@ import Image from "next/image";
 import ThirdPost from "../pages/posts/ThirdPost";
 import styles from "./gallery.module.css";
 
-export default function Gallery({ userName  }) {
+export default function Gallery() {
     return(
         <div
          className={styles.gallery}>
@@ -21,6 +21,3 @@ export default function Gallery({ userName  }) {
     );
 }
 
-Gallery.getInitialProps = () => {
-    return { userName: 'Brychxpin' }
-}

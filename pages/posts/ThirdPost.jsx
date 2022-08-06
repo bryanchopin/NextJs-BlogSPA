@@ -18,8 +18,19 @@ export default function ThirdPost( {userName}) {
 
 //just working on this one page function
 //allows you to pass in a parameter  data fetching
-ThirdPost.getInitialProps = () => {
-  return {
-    userName: 'brychxpin'}
-  }
 
+
+// ThirdPost.getInitialProps = () => {
+//   return {
+//     userName: 'brychxpin'}
+//   }
+
+
+//First Time i tried to pass api data to this page
+ThirdPost.getInitialProps = () => {
+  return fetch("http://localhost:3000/api/hello")
+    .then(res => res.json())
+    // .then(data => {
+    //   return { userName: data.userName };
+    // });
+} 
